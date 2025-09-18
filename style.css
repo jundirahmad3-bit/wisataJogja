@@ -1,0 +1,556 @@
+:root{
+    --warna-primer:#FFFAEC;
+    --warna-sekunder:#F5ECD5;
+    --warna-ketiga:#578E7E;
+    --warna-keempat:#3D3D3D;
+    --warna-teks:#2c2c2c;
+    --teks-putih:#ffffff;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color:var(--warna-teks);
+    background:var(--warna-primer);
+    min-height: 100vh;
+}
+.navbar{
+    background-color: var(--warna-sekunder);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-item{
+    position: relative;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--warna-teks);
+    font-weight: 700;
+    font-size: 0,2rem;
+    padding: 0,75rem 1.5rem;
+    transition: all 0.3 ease;
+    position: relative;
+    background: transparent;
+    border: none;
+
+}
+
+.nav-link:hover {
+    color: #00FFFF;
+}
+
+.nav-link.active {
+    color:#00FFFF;
+    
+}
+
+.hero {
+    background-color: var(--warna-keempat);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero h2 {
+    color: white;
+    font-family:"Poppins", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    border-right: 3px solid;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing-center 6s infinite;
+
+
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    display: block;
+}
+@keyframes typing {
+    0% {width: 0; }
+    100% {width: 100%;}
+
+}
+@keyframes typing-center{
+50% {
+    width: 100%;
+    margin-left: 0%;
+}
+
+70% {
+    width: 100%;
+    margin-left: 0%;
+}
+100% {
+    width: 0;
+    margin-left: 50%;
+
+}
+}
+
+img.displaySlide {
+    opacity: 1 !important;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.content {
+    padding: 3rem 0 0 0;
+}
+
+/* Textbox Container */
+.textbox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.textbox {
+    background-color: var(--warna-primer);
+    border: 2px solid var(--warna-sekunder);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: fit-content;
+}
+
+.textbox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.textbox h4 {
+    color: var(--warna-ketiga);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--warna-sekunder);
+    padding-bottom: 0.5rem;
+}
+
+.textbox p {
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+/* Section Separator */
+.section-separator {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--warna-ketiga), transparent);
+    margin: 3rem 0;
+    position: relative;
+}
+
+.section-separator::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--warna-ketiga);
+    border-radius: 50%;
+}
+
+/* Improved content layout */
+.sejarah-yogyakarta {
+    background-color: var(--warna-primer);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sejarah-yogyakarta h3 {
+    color: var(--warna-ketiga);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.sejarah-yogyakarta h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--warna-ketiga);
+    border-radius: 2px;
+}
+
+.sejarah-yogyakarta p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: var(--warna-teks);
+}
+
+/* Wisata & Budaya Page Styles */
+.wisata-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--warna-primer);
+}
+
+.wisata-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--teks-putih);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--warna-sekunder);
+}
+
+.wisata-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.wisata-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.wisata-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--warna-ketiga);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(87, 142, 126, 0.3);
+}
+
+.wisata-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(87, 142, 126, 0.4);
+}
+
+.wisata-content {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.wisata-content h3 {
+    color: var(--warna-ketiga);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--warna-ketiga);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.wisata-content p {
+    color: var(--warna-teks);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.wisata-link {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--warna-ketiga), #4a7a6b);
+    color: var(--teks-putih);
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(87, 142, 126, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.wisata-link:hover {
+    background: linear-gradient(135deg, #4a7a6b, var(--warna-ketiga));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(87, 142, 126, 0.4);
+}
+
+/* Hero Image for Wisata & Budaya Page */
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--warna-sekunder);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Wisata & Budaya */
+@media (max-width: 768px) {
+    .wisata-container {
+        padding: 1rem;
+    }
+    
+    .wisata-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .wisata-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    
+    .wisata-content {
+        padding-left: 0;
+    }
+    
+    .wisata-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .wisata-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-image {
+        height: 250px;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .wisata-container {
+        padding: 0.5rem;
+    }
+    
+    .wisata-item {
+        padding: 1rem;
+    }
+    
+    .wisata-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .wisata-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-image {
+        height: 200px;
+    }
+}
+
+/* Style untuk footer */
+.footer {
+    background-color: var(--warna-keempat);
+    color: var(--teks-putih);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section h3 {
+    color: var(--teks-putih);
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-link a {
+    color: var(--teks-putih);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-link a:hover {
+    color: #00FFFF;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Style untuk button */
+.button-source {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.button-source a {
+    text-decoration: none;
+}
+
+.button-jogja {
+    background: linear-gradient(135deg, var(--warna-ketiga), #4a7a6b);
+    color: var(--teks-putih);
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(87, 142, 126, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button-jogja:hover {
+    background: linear-gradient(135deg, #4a7a6b, var(--warna-ketiga));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(87, 142, 126, 0.4);
+}
+
+/* Style untuk sultan-card */
+.sultan-card {
+    background-color: var(--warna-primer);
+    border: 2px solid var(--warna-sekunder);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sultan-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sultan-card ol {
+    padding-left: 2rem;
+    counter-reset: item;
+}
+
+.sultan-card li {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    text-align: justify;
+    position: relative;
+    list-style: none;
+    counter-increment: item;
+}
+
+.sultan-card li::before {
+    content: counter(item);
+    background-color: var(--warna-ketiga);
+    color: var(--teks-putih);
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -2.5rem;
+    top: 0.2rem;
+}
+
+/* Specific styles for active navigation */
+.nav-link.active {
+    color: var(--warna-ketiga) !important;
+}
